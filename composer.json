@@ -1,0 +1,52 @@
+{
+    "name": "coffreo/php-translation-js-extractor-bundle",
+    "description": "Add javascript translation extractor for php-translation/symfony-bundle package",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cyril MERY",
+            "email": "cmery@coffreo.com"
+        }
+    ],
+    "keywords": [
+        "js",
+        "javascript",
+        "translation",
+        "translate",
+        "i18n",
+        "php-translation",
+        "js-translation",
+        "bazinga"
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "php-translation/extractor": "^1.7",
+        "symfony/finder": "^2.7 || ^3.0 || ^4.0",
+        "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0",
+        "php-translation/symfony-bundle": "^0.8.1",
+        "coffreo/js-translation-extractor": "^0.1"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^3.4 || ^4.0",
+        "coffreo/php-cs-fixer-config": "^2.1",
+        "matthiasnoback/symfony-dependency-injection-test": "^1.2 || ^2.3 || ^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Coffreo\\PHPTranslationJsExtractorBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Coffreo\\PHPTranslationJsExtractorBundle\\Tests\\": "tests/"
+        }
+    },
+    "conflict": {
+        "matthiasnoback/symfony-dependency-injection-test": "^4.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/simple-phpunit",
+        "test-ci": "vendor/bin/simple-phpunit --coverage-text --coverage-clover=build/coverage.xml"
+    }
+}

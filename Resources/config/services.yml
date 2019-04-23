@@ -1,0 +1,11 @@
+services:
+    coffreo.php_translation.js_extractor.js:
+        class:  Coffreo\PHPTranslationJsExtractorBundle\Extractor\JsFileExtractor
+        tags:
+            - { name: 'php_translation.extractor', type: 'js' }
+
+    coffreo.php_translation.js_extractor.jsx:
+        class:  Coffreo\PHPTranslationJsExtractorBundle\Extractor\JsFileExtractor
+        arguments: ['jsx']
+        tags:
+            - { name: 'php_translation.extractor', type: 'jsx' }
