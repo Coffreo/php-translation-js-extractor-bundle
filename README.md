@@ -2,6 +2,7 @@
 
 By [Coffreo](https://coffreo.biz)
 
+![PHP compatible version](https://img.shields.io/packagist/php-v/Coffreo/php-translation-js-extractor.svg)
 [![Build Status](https://travis-ci.org/Coffreo/php-translation-js-extractor-bundle.svg?branch=master)](https://travis-ci.org/Coffreo/php-translation-js-extractor-bundle)
 [![Coverage](https://img.shields.io/scrutinizer/coverage/g/coffreo/php-translation-js-extractor-bundle.svg)](https://scrutinizer-ci.com/g/coffreo/php-translation-js-extractor-bundle)
 
@@ -9,6 +10,8 @@ Extract translations from Javascript source files.
 
 * **Require** [`PHP Translation symfony-bundle`](https://php-translation.readthedocs.io/en/latest/symfony/index.html) 
 * **Recommended** [`willdurand/js-translation-bundle`](https://github.com/willdurand/BazingaJsTranslationBundle)
+
+> Same bundle exists for [JMSTranslation](http://jmsyst.com/bundles/JMSTranslationBundle): [Coffreo/jms-translation-js-extractor-bundle](https://github.com/Coffreo/jms-translation-js-extractor-bundle)
 
 ## Installation
 
@@ -26,29 +29,41 @@ composer require coffreo/php-translation-js-extractor-bundle
   composer require coffreo/php-translation-js-extractor-bundle
   ```
 
-* Enable bundle: add bundle to `AppKernel`
+* Enable bundle:
+    
+  * symfony 3.*
+    ````php
+    // config/AppKernel.php
+    public function registerBundles()
+    {
+        return array(
+            // ...
+            new Coffreo\PHPTranslationJsExtractorBundle\PHPTranslationJsExtractorBundle(),
+            // ...
+        );
+    }
+    ````
+    
+  * symfony 4.* (if not already added by `symfony/flex`)
+    ````php
+    // config/bundles.php
+    
+    return [
+        // ...
+        Coffreo\PHPTranslationJsExtractorBundle\PHPTranslationJsExtractorBundle::class => ['all' => true],
+    ];
+    ````
 
-````php
-// config/AppKernel.php
-public function registerBundles()
-{
-    return array(
-        // ...
-        new Coffreo\PHPTranslationJsExtractorBundle\PHPTranslationJsExtractorBundle(),
-        // ...
-    );
-}
-````
 
 ## Usage
 
 This bundle allow extraction of translated strings in javascript files using [Coffreo/js-translation-extractor](https://github.com/Coffreo/js-translation-extractor).
 
-No specific command line to use, just use originals php-translation commands:
+No specific command line to use, just use originals `php-translation/symfony-bundle` commands:
 
-```
-(app|bin)/console translation:extract ....
-``` 
+````shell
+$ bin/console translation:extract ....
+```` 
 
 Translations found are automatically added to current translations files as PHP, twig ones.
 
@@ -58,6 +73,7 @@ This bundle doesn't need configuration.
 However, to extract strings from JS files, you must indicate where are stored your JS files in [`php-translation/symfony-bundle` configuration](https://php-translation.readthedocs.io/en/latest/symfony/index.html#configuration).
 
 ```
+# paths below are symfony 4.X paths, make sure to change them for sumfony 3.X
 # config/packages/php_translation.yaml
 translation:
     ...
