@@ -19,6 +19,9 @@
         "js-translation",
         "bazinga"
     ],
+    "suggest": {
+        "willdurand/js-translation-bundle": "Allow usage of translated strings in Javascript"
+    },
     "require": {
         "php": "^5.6 || ^7.0",
         "php-translation/extractor": "^1.7",
@@ -44,9 +47,5 @@
     },
     "conflict": {
         "matthiasnoback/symfony-dependency-injection-test": "^4.0"
-    },
-    "scripts": {
-        "test": "vendor/bin/simple-phpunit",
-        "test-ci": "vendor/bin/simple-phpunit --coverage-text --coverage-clover=build/coverage.xml"
     }
 }
