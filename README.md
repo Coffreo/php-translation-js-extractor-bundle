@@ -2,7 +2,7 @@
 
 By [Coffreo](https://coffreo.biz)
 
-[![Build Status](https://travis-ci.org/Coffreo/php-translation-js-extractor-bundle.svg?branch=master)](https://travis-ci.com/Coffreo/php-translation-js-extractor-bundle)
+[![Build Status](https://travis-ci.org/Coffreo/php-translation-js-extractor-bundle.svg?branch=master)](https://travis-ci.org/Coffreo/php-translation-js-extractor-bundle)
 [![Coverage](https://img.shields.io/scrutinizer/coverage/g/coffreo/php-translation-js-extractor-bundle.svg)](https://scrutinizer-ci.com/g/coffreo/php-translation-js-extractor-bundle)
 
 Extract translations from Javascript source files.
