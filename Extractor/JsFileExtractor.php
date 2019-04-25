@@ -14,7 +14,7 @@ namespace Coffreo\PHPTranslationJsExtractorBundle\Extractor;
 use Coffreo\JsTranslationExtractor\Extractor\JsTranslationExtractor;
 use Coffreo\JsTranslationExtractor\Extractor\JsTranslationExtractorInterface;
 use Coffreo\JsTranslationExtractor\Model\TranslationCollection;
-use Coffreo\JsTranslationExtractor\Model\TranslationLocation;
+use Coffreo\JsTranslationExtractor\Model\TranslationString;
 use Symfony\Component\Finder\SplFileInfo;
 use Translation\Extractor\FileExtractor\FileExtractor;
 use Translation\Extractor\Model\SourceCollection;
@@ -24,6 +24,9 @@ final class JsFileExtractor implements FileExtractor
 {
     /** @var JsTranslationExtractorInterface */
     private $extractor;
+
+    /** @var string */
+    private $type;
 
     /**
      * JsFileExtractor constructor.
@@ -43,7 +46,7 @@ final class JsFileExtractor implements FileExtractor
         $translations = $this->findTranslations($file);
 
         foreach ($translations as $translation) {
-            /* @var $translation TranslationLocation */
+            /* @var $translation TranslationString */
             $collection->addLocation(new SourceLocation($translation->getMessage(), $realPath, $translation->getLine(), $translation->getContext()));
         }
     }
