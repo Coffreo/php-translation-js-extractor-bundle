@@ -2,7 +2,7 @@
 
 By [Coffreo](https://coffreo.biz)
 
-![PHP compatible version](https://img.shields.io/packagist/php-v/Coffreo/php-translation-js-extractor.svg)
+![PHP from Packagist](https://img.shields.io/packagist/php-v/coffreo/php-translation-js-extractor-bundle.svg)
 [![Build Status](https://travis-ci.org/Coffreo/php-translation-js-extractor-bundle.svg?branch=master)](https://travis-ci.org/Coffreo/php-translation-js-extractor-bundle)
 [![Coverage](https://img.shields.io/scrutinizer/coverage/g/coffreo/php-translation-js-extractor-bundle.svg)](https://scrutinizer-ci.com/g/coffreo/php-translation-js-extractor-bundle)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Coffreo/php-translation-js-extractor-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Coffreo/php-translation-js-extractor-bundle/?branch=master)
