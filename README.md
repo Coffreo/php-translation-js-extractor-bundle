@@ -8,10 +8,9 @@ By [Coffreo](https://coffreo.biz)
 
 Extract translations from Javascript source files.
 
-* **Require** [`PHP Translation symfony-bundle`](https://php-translation.readthedocs.io/en/latest/symfony/index.html) 
 * **Recommended** [`willdurand/js-translation-bundle`](https://github.com/willdurand/BazingaJsTranslationBundle)
 
-> Same bundle exists for [JMSTranslation](http://jmsyst.com/bundles/JMSTranslationBundle): [Coffreo/jms-translation-js-extractor-bundle](https://github.com/Coffreo/jms-translation-js-extractor-bundle)
+> Same bundle exists for [JMSTranslation](http://jmsyst.com/bundles/JMSTranslationBundle): see [Coffreo/jms-translation-js-extractor-bundle](https://github.com/Coffreo/jms-translation-js-extractor-bundle)
 
 ## Installation
 
