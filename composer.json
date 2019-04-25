@@ -22,6 +22,10 @@
     "suggest": {
         "willdurand/js-translation-bundle": "Allow usage of translated strings in Javascript"
     },
+    "scripts": {
+        "test": "vendor/bin/simple-phpunit --coverage-text --coverage-html=build/coverage",
+        "cs": "vendor/bin/php-cs-fixer fix --diff --verbose"
+    },
     "require": {
         "php": "^5.6 || ^7.0",
         "php-translation/extractor": "^1.7",
