@@ -38,7 +38,7 @@ composer require coffreo/php-translation-js-extractor-bundle
     {
         return array(
             // ...
-            new Coffreo\PHPTranslationJsExtractorBundle\PHPTranslationJsExtractorBundle(),
+            new Coffreo\PHPTranslationJsExtractorBundle\CoffreoPHPTranslationJsExtractorBundle(),
             // ...
         );
     }
@@ -50,7 +50,7 @@ composer require coffreo/php-translation-js-extractor-bundle
     
     return [
         // ...
-        Coffreo\PHPTranslationJsExtractorBundle\PHPTranslationJsExtractorBundle::class => ['all' => true],
+        Coffreo\PHPTranslationJsExtractorBundle\CoffreoPHPTranslationJsExtractorBundle::class => ['all' => true],
     ];
     ````
 

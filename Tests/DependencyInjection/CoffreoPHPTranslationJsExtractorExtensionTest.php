@@ -2,11 +2,11 @@
 
 namespace Coffreo\PHPTranslationJsExtractorBundle\Tests\Extractor;
 
-use Coffreo\PHPTranslationJsExtractorBundle\DependencyInjection\PHPTranslationJsExtractorExtension;
+use Coffreo\PHPTranslationJsExtractorBundle\DependencyInjection\CoffreoPHPTranslationJsExtractorExtension;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 
-/** @covers \Coffreo\PHPTranslationJsExtractorBundle\DependencyInjection\PHPTranslationJsExtractorExtension */
-class PHPTranslationJsExtractorExtensionTest extends AbstractExtensionTestCase
+/** @covers \Coffreo\PHPTranslationJsExtractorBundle\DependencyInjection\CoffreoPHPTranslationJsExtractorExtension */
+class CoffreoPHPTranslationJsExtractorExtensionTest extends AbstractExtensionTestCase
 {
     /**
      * @return array|\Symfony\Component\DependencyInjection\Extension\ExtensionInterface[]
@@ -14,7 +14,7 @@ class PHPTranslationJsExtractorExtensionTest extends AbstractExtensionTestCase
     protected function getContainerExtensions()
     {
         return [
-            new PHPTranslationJsExtractorExtension(),
+            new CoffreoPHPTranslationJsExtractorExtension(),
         ];
     }
 
