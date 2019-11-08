@@ -52,8 +52,6 @@ final class JsFileExtractor implements FileExtractor
     }
 
     /**
-     * @param SplFileInfo $file
-     *
      * @return TranslationCollection
      */
     public function findTranslations(SplFileInfo $file)
