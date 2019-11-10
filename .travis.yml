@@ -45,18 +45,15 @@ matrix:
         - env: STABILITY="dev"
 
 before_install:
-    - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
     - if [[ $COVERAGE != true ]]; then phpenv config-rm xdebug.ini || true; fi
     - if ! [ -z "$STABILITY" ]; then composer config minimum-stability ${STABILITY}; fi;
     - if [ -v "$SYMFONY_VERSION" ]; then travis_retry composer require --no-update symfony/flex; fi;
     - if [ -v "$SYMFONY_VERSION" ]; then composer config extra.symfony.require "${SYMFONY_VERSION}"; fi;
 
 install:
-    # To be removed when this issue will be resolved: https://github.com/composer/composer/issues/5355
-    - if [[ "$COMPOSER_FLAGS" == *"--prefer-lowest"* ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable --quiet; fi
     # For obscur reason, the PHP 5.6 with lowest dependencies is very long to execute, timeout has been raised
     # to ensure stage is finished before timeout
-    - travis_wait 30 travis_retry composer update ${COMPOSER_FLAGS} --prefer-dist --no-interaction
+    - COMPOSER_MEMORY_LIMIT=-1 travis_wait 60 travis_retry composer update ${COMPOSER_FLAGS} --prefer-dist --no-interaction
     - ./vendor/bin/simple-phpunit install
 
 script:
