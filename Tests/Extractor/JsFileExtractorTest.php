@@ -41,7 +41,6 @@ class JsFileExtractorTest extends TestCase
             ->willReturn($collectionStub);
 
         $extractor = new JsFileExtractor('type', $baseExtractorMock);
-        $this->assertEquals('type', $extractor->getType());
         $file = \realpath(__DIR__.'/../Resources/file');
 
         $collection = new SourceCollection();

@@ -9,16 +9,16 @@ use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 class CoffreoPHPTranslationJsExtractorExtensionTest extends AbstractExtensionTestCase
 {
     /**
-     * @return array|\Symfony\Component\DependencyInjection\Extension\ExtensionInterface[]
+     * @return \Symfony\Component\DependencyInjection\Extension\ExtensionInterface[]
      */
-    protected function getContainerExtensions()
+    protected function getContainerExtensions(): array
     {
         return [
             new CoffreoPHPTranslationJsExtractorExtension(),
         ];
     }
 
-    public function getHandledTypes()
+    public function getHandledTypes(): array
     {
         return [
             ['js'],

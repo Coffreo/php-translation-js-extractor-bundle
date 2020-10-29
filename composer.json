@@ -27,17 +27,16 @@
         "cs": "vendor/bin/php-cs-fixer fix --diff --verbose"
     },
     "require": {
-        "php": "^5.6 || ^7.0",
-        "php-translation/extractor": "^1.7",
-        "symfony/finder": "^2.7 || ^3.0 || ^4.0",
-        "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0",
-        "php-translation/symfony-bundle": "^0.8",
+        "php": "^7.2",
+        "php-translation/extractor": "^2.0.2",
+        "symfony/framework-bundle": "^3.0 || ^4.3 || ^5.0",
+        "php-translation/symfony-bundle": ">=0.9.0 <1.0.0",
         "coffreo/js-translation-extractor": "^0.1"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.4 || ^4.0",
         "coffreo/php-cs-fixer-config": "^2.2",
-        "matthiasnoback/symfony-dependency-injection-test": "^1.2 || ^2.3 || ^3.1"
+        "matthiasnoback/symfony-dependency-injection-test": "^4.2"
     },
     "autoload": {
         "psr-4": {
@@ -48,8 +47,5 @@
         "psr-4": {
             "Coffreo\\PHPTranslationJsExtractorBundle\\Tests\\": "tests/"
         }
-    },
-    "conflict": {
-        "matthiasnoback/symfony-dependency-injection-test": "^4.0"
     }
 }
