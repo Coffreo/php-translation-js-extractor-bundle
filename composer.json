@@ -35,7 +35,7 @@
         "coffreo/js-translation-extractor": "^0.1"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^3.4 || ^4.0",
+        "symfony/phpunit-bridge": "^3.4.26 || ~4.1.12 || ^4.2.7",
         "coffreo/php-cs-fixer-config": "^2.2",
         "matthiasnoback/symfony-dependency-injection-test": "^1.2 || ^2.3 || ^3.1"
     },
