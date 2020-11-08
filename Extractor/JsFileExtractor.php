@@ -40,7 +40,7 @@ final class JsFileExtractor implements FileExtractor
         $this->extractor = $extractor ?: new JsTranslationExtractor();
     }
 
-    public function getSourceLocations(SplFileInfo $file, SourceCollection $collection)
+    public function getSourceLocations(SplFileInfo $file, SourceCollection $collection): void
     {
         $realPath = $file->getRealPath();
         $translations = $this->findTranslations($file);
@@ -51,19 +51,13 @@ final class JsFileExtractor implements FileExtractor
         }
     }
 
-    /**
-     * @return TranslationCollection
-     */
-    public function findTranslations(SplFileInfo $file)
+    public function supportsExtension(string $extension): bool
     {
-        return $this->extractor->extract($file->getContents(), new TranslationCollection());
+        return $this->type === $extension;
     }
 
-    /**
-     * @return string the file type
-     */
-    public function getType()
+    private function findTranslations(SplFileInfo $file): TranslationCollection
     {
-        return $this->type;
+        return $this->extractor->extract($file->getContents(), new TranslationCollection());
     }
 }
