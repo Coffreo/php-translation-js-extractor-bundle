@@ -27,11 +27,11 @@
         "cs": "vendor/bin/php-cs-fixer fix --diff --verbose"
     },
     "require": {
-        "php": "^7.2",
+        "php": "^7.2 || ^8.0",
         "php-translation/extractor": "^2.0.2",
         "symfony/framework-bundle": "^3.0 || ^4.3 || ^5.0",
         "php-translation/symfony-bundle": ">=0.9.0 <1.0.0",
-        "coffreo/js-translation-extractor": "^0.1"
+        "coffreo/js-translation-extractor": "^0.2"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.4 || ^4.0",
