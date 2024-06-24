@@ -18,7 +18,7 @@ matrix:
         - php: 7.2
           env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="weak_vendors"
         - php: 7.4
-          env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="weak_vendors"
+          env: SYMFONY_PHPUNIT_VERSION=8 COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="weak_vendors"
 
         # Test the latest stable release
         - php: 7.4

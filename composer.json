@@ -34,9 +34,9 @@
         "coffreo/js-translation-extractor": "^0.3"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^3.4 || ^4.0",
+        "symfony/phpunit-bridge": "^3.4.26 || ^4.1.12",
         "coffreo/php-cs-fixer-config": "^2.2",
-        "matthiasnoback/symfony-dependency-injection-test": "^4.2"
+        "matthiasnoback/symfony-dependency-injection-test": "^3.1 || ^4.2"
     },
     "autoload": {
         "psr-4": {
